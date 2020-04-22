@@ -7,4 +7,5 @@ Part 2 of Week 1's task is to find a company that can process our transactions w
 
 ### Be sure to upload your Week 1 progress by THIS SATURDAY, April 25.
 Part 1 (Homepage Task) should upload their code to this *Github*
+
 Part 2 (Donation Processing Company Task) should upload a document with their findings to our *Google Drive*
