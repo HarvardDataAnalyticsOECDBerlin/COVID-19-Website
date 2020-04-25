@@ -1,8 +1,39 @@
 {% extends "layout.html" %}
 
-{% block title %}
-Make a Donation
-{% endblock %}
-
 {% block main %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <p><a href="{{ url_for('healthCare') }}">HealthCare Workers</a></p>
+      </div>
+      <div class="col-sm">
+        <p><a href="{{ url_for('healthCare') }}">Homeless</a></p>
+      </div>
+      <div class="col-sm" main
+        <p><a href="{{ url_for('healthCare') }}">Working Parents</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
 {% endblock %}
