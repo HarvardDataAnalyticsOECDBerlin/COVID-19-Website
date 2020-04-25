@@ -7,6 +7,6 @@ app = Flask(__name__)
 def home():
     return render_template('landing.html')
 
-@app.route('/healthCare')
-def healthCare():
-    return render_template('healthCare.html')
+@app.route('/donate')
+def donate():
+    return render_template('donation.html')
