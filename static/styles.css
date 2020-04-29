@@ -1,7 +1,18 @@
+.navbar
+{
+  background-color: #4171ac 
+}
+
 nav .navbar-brand
 {
     /* size for brand */
+    color: #ffffff;
     font-size: xx-large;
+}
+
+nav .nav-link
+{
+  color: #ffffff;
 }
 
 /* Will be useful for payment form later on */
@@ -55,7 +66,7 @@ main tfoot
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #d15e10 linear-gradient(90deg,#d15e10,rgba(216,38,31,.95) 98%);
+    background: #7197c6;
 }
 
 .category-body
