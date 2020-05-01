@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = 'thisShouldBeChanged!!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://///Users/aaronabraham/Documents/Programming/Python/COVID-19-Website/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://///Users/aaronabraham/Documents/Programming/Python/COVID-19-Website/database.db' # This needs to be changed as well
 db = SQLAlchemy(app)
 
 # Creating database class. This will need to be moved to a separate module later
