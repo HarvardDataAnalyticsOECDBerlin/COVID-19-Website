@@ -108,3 +108,11 @@ button
   border-bottom: 2px solid gray;
   border-right: 2px solid gray;
 }
+
+.login-button {
+  background-color: #4171ac;
+}
+
+.login-button:hover {
+  background-color: #4171ac;
+}
