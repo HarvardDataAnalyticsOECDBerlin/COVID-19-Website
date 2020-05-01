@@ -2,10 +2,20 @@ from flask import Flask, render_template, url_for, redirect, request
 from flask_bootstrap import Bootstrap
 from datetime import datetime
 from forms import LoginForm
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = 'thisShouldBeChanged!!'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://///Users/aaronabraham/Documents/Programming/Python/COVID-19-Website/database.db'
+db = SQLAlchemy(app)
+
+# Creating database class. This will need to be moved to a separate module later
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    username = db.Column(db.String(), unique = True)
+    email = db.Column(db.String(), unique = True)
+    password = db.Column(db.String())
 
 @app.route('/')
 def home():
@@ -20,7 +30,13 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
-        return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
+        user = User.query.filter_by(username = form.username.data).first()
+
+        if user:
+           if user.password = form.password.data:
+                return redirect(url_for('dashboard')) # This is to create new resources
+        else:
+            return '<h1> Invalid username or password </h1>'
 
     return render_template('login.html', form = form)
 
